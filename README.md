@@ -2,8 +2,11 @@
 
 **Balatro Lite** 是一個基於 iOS SwiftUI 開發的 Roguelike 撲克卡牌遊戲，致敬了知名獨立遊戲《Balatro》。玩家需要透過打出撲克牌型來獲得籌碼，並利用強大的「小丑牌 (Jokers)」來強化牌組與得分倍率，目標是擊敗不斷增強的關卡敵人（盲注）。
 
-![Game Screenshot](https://via.placeholder.com/800x400?text=Balatro+Lite+Screenshot) 
-*(請自行替換為實際遊戲截圖)*
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 14 12" src="https://github.com/user-attachments/assets/99d112d8-2367-4f6d-a410-6955153f3167" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 15 14" src="https://github.com/user-attachments/assets/8c364a99-5589-4502-bfe5-91925e6d0904" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 15 52" src="https://github.com/user-attachments/assets/00b6c3ab-78f8-498d-83f7-0b4440f1bc2e" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 16 02" src="https://github.com/user-attachments/assets/127c2c15-d390-4371-8c2f-aa2c93dfe29a" />
+
 
 ## ✨ 核心特色 (Features)
 
