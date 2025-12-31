@@ -44,7 +44,7 @@ struct GameView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
                             VStack {
-                                Text("Hands")
+                                Text("出牌次數")
                                     .font(.caption)
                                 Text("\(game.handsRemaining)")
                                     .font(.title2)
@@ -53,7 +53,7 @@ struct GameView: View {
                             }
                             Spacer()
                             VStack {
-                                Text("Discards")
+                                Text("棄牌次數")
                                     .font(.caption)
                                 Text("\(game.discardsRemaining)")
                                     .font(.title2)
@@ -65,7 +65,7 @@ struct GameView: View {
                         Divider()
                         
                         HStack {
-                            Text("Money")
+                            Text("金錢")
                             Spacer()
                             Text("$\(game.money)")
                                 .foregroundStyle(.yellow)
@@ -73,7 +73,7 @@ struct GameView: View {
                         }
                         
                         HStack {
-                            Text("Round")
+                            Text("回合")
                             Spacer()
                             Text("\(game.currentRound)")
                                 .bold()
@@ -118,7 +118,7 @@ struct GameView: View {
                                 }
                             }
                             if game.jokers.isEmpty {
-                                Text("No Jokers")
+                                Text("無小丑牌")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                                     .frame(height: 70)
@@ -216,7 +216,7 @@ struct GameView: View {
                                     )
                                     .shadow(radius: 5)
                                 
-                                Text("Select up to 5 cards to play")
+                                Text("請選擇最多 5 張牌")
                                     .font(.caption)
                                     .foregroundStyle(.white.opacity(0.6))
                             }
@@ -258,7 +258,7 @@ struct GameView: View {
                             VStack(spacing: 4) {
                                 Image(systemName: "arrow.up.arrow.down")
                                     .font(.title3)
-                                Text(game.sortType == .rank ? "Rank" : "Suit") // These are short enough to not localize or can generally be understood, but user asked for traditional chinese previously? But here they asked "small to large or by suit". I'll use English for now or "Rank"/"Suit".
+                                Text(game.sortType == .rank ? "點數" : "花色")
                                     .font(.caption2)
                                     .bold()
                             }
@@ -288,10 +288,8 @@ struct GameView: View {
                         }
                     } label: {
                         VStack {
-                            Text("Play")
+                            Text("出牌")
                                 .font(.headline)
-                            Text("Hand")
-                                .font(.caption)
                         }
                         .frame(width: 80, height: 60)
                         .background(game.selectedCards.isEmpty ? Color.gray : Color.blue)
@@ -304,7 +302,7 @@ struct GameView: View {
                         game.discardHand()
                     } label: {
                         VStack {
-                            Text("Discard")
+                            Text("棄牌")
                                 .font(.headline)
                         }
                         .frame(width: 80, height: 50)
@@ -347,14 +345,14 @@ struct GameView: View {
                     Color.black.opacity(0.6).ignoresSafeArea().zIndex(190)
                     
                     VStack(spacing: 30) {
-                        Text("Paused")
+                        Text("暫停中")
                             .font(.system(size: 40, weight: .heavy, design: .rounded))
                             .foregroundStyle(.white)
                         
                         Button(action: {
                             withAnimation { isPaused = false }
                         }) {
-                            Text("Resume")
+                            Text("繼續遊戲")
                                 .font(.title2)
                                 .bold()
                                 .frame(width: 200, height: 60)
@@ -366,7 +364,7 @@ struct GameView: View {
                         Button(action: {
                             game.state = .menu
                         }) {
-                            Text("Back to Lobby")
+                            Text("返回大廳")
                                 .font(.headline)
                                 .frame(width: 200, height: 50)
                                 .background(Color.red.opacity(0.8))
@@ -433,7 +431,7 @@ struct GameView: View {
                                 selectedJoker = nil
                             }
                         }) {
-                            Text("Sell for $\(max(1, joker.cost / 2))")
+                            Text("販賣 $\(max(1, joker.cost / 2))")
                                 .font(.headline)
                                 .foregroundStyle(.red)
                                 .padding(.horizontal, 16)

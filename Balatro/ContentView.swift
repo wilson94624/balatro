@@ -44,23 +44,23 @@ struct GameOverView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("GAME OVER")
+            Text("遊戲結束")
                 .font(.system(size: 60, weight: .heavy))
                 .foregroundStyle(.red)
             
-            Text("Score: \(game.currentScore)")
+            Text("分數: \(game.currentScore)")
                 .font(.title)
             
-            Text("Round: \(game.currentRound)")
+            Text("回合: \(game.currentRound)")
                 .font(.title2)
             
-            Button("Replay") {
+            Button("重新開始") {
                 game.startNewGame()
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.extraLarge)
             
-            Button("Back to Lobby") {
+            Button("返回大廳") {
                 game.state = .menu
             }
             .buttonStyle(.bordered)

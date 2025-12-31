@@ -39,17 +39,6 @@ struct LobbyView: View {
                                 .font(.title2)
                                 .foregroundStyle(.white.opacity(0.6))
                                 .tracking(2)
-                            
-                            // Orientation Hint
-                            HStack(spacing: 8) {
-                                Image(systemName: "iphone.landscape")
-                                Text("請將手機橫置以獲得最佳體驗")
-                            }
-                            .font(.caption)
-                            .foregroundStyle(.yellow)
-                            .padding(8)
-                            .background(Color.yellow.opacity(0.1))
-                            .cornerRadius(8)
                         }
                         .frame(maxWidth: .infinity)
                         

@@ -12,14 +12,14 @@ struct ShopView: View {
                 VStack(spacing: 0) {
                     // MARK: - Header (Compact)
                     HStack {
-                        Text("Shop")
+                        Text("商店")
                             .font(.system(size: 28, weight: .bold, design: .serif))
                             .foregroundStyle(.white)
                         
                         Spacer()
                         
                         HStack(spacing: 4) {
-                            Text("Money:")
+                            Text("金錢:")
                                 .font(.headline)
                                 .foregroundStyle(.white.opacity(0.8))
                             Text("$\(game.money)")
@@ -58,7 +58,7 @@ struct ShopView: View {
                             }
                             
                             if game.shopJokers.isEmpty && game.currentBoosterPack == nil {
-                                Text("Sold Out")
+                                Text("已售罄")
                                     .font(.title)
                                     .foregroundStyle(.white.opacity(0.5))
                                     .frame(width: geometry.size.width - 40)
@@ -78,7 +78,7 @@ struct ShopView: View {
                             game.startNextRound()
                             dismiss()
                         }) {
-                            Text("Next Round")
+                            Text("下一回合")
                                 .font(.headline)
                                 .bold()
                                 .foregroundStyle(.white)
@@ -109,7 +109,7 @@ struct ShopView: View {
                         Color.black.opacity(0.9).ignoresSafeArea()
                         
                         VStack(spacing: 15) {
-                            Text("Choose One")
+                            Text("請選擇一張")
                                 .font(.largeTitle)
                                 .bold()
                                 .foregroundStyle(.white)
@@ -128,7 +128,7 @@ struct ShopView: View {
                                 .padding()
                             }
                             
-                            Button("Skip") {
+                            Button("跳過") {
                                 withAnimation {
                                     game.skipBoosterSelection()
                                 }
@@ -177,7 +177,7 @@ struct BoosterPackItem: View {
                     Text(pack.name)
                         .font(.headline)
                         .foregroundStyle(.white)
-                    Text("Contains 3 Cards")
+                    Text("包含 3 張卡牌")
                         .font(.caption)
                         .foregroundStyle(.white.opacity(0.8))
                     
@@ -259,7 +259,7 @@ struct JokerSelectionItem: View {
                     .foregroundStyle(.white.opacity(0.8))
                     .frame(height: 40)
                 
-                Text("Select")
+                Text("選擇")
                     .font(.headline)
                     .padding(.horizontal, 20)
                     .padding(.vertical, 8)
@@ -355,7 +355,7 @@ struct JokerShopItem: View {
                 Spacer(minLength: 0)
                 
                 HStack {
-                    Text(joker.cost == 0 ? "Free" : "$\(joker.cost)")
+                    Text(joker.cost == 0 ? "免費" : "$\(joker.cost)")
                         .font(.headline)
                         .bold()
                         .foregroundStyle(.yellow)
@@ -369,7 +369,7 @@ struct JokerShopItem: View {
                         Button(action: {
                             game.buyJoker(joker)
                         }) {
-                            Text("Buy")
+                            Text("購買")
                                 .font(.caption2)
                                 .bold()
                                 .padding(.horizontal, 8)
