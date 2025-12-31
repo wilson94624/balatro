@@ -1,59 +1,68 @@
-# 🃏 Balatro Lite (SwiftUI Edition)
+# 🃏 Balatro Lite (iOS SwiftUI Edition)
 
 **Balatro Lite** 是一個基於 iOS SwiftUI 開發的 Roguelike 撲克卡牌遊戲，致敬了知名獨立遊戲《Balatro》。玩家需要透過打出撲克牌型來獲得籌碼，並利用強大的「小丑牌 (Jokers)」來強化牌組與得分倍率，目標是擊敗不斷增強的關卡敵人（盲注）。
 
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 14 12" src="https://github.com/user-attachments/assets/99d112d8-2367-4f6d-a410-6955153f3167" />
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 15 14" src="https://github.com/user-attachments/assets/8c364a99-5589-4502-bfe5-91925e6d0904" />
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 15 52" src="https://github.com/user-attachments/assets/00b6c3ab-78f8-498d-83f7-0b4440f1bc2e" />
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 16 02" src="https://github.com/user-attachments/assets/127c2c15-d390-4371-8c2f-aa2c93dfe29a" />
-
-
 ## ✨ 核心特色 (Features)
 
-### 🎮 Roguelike 撲克玩法
-- **牌型計分**：支援標準撲克牌型（同花、順子、葫蘆等），並結合 **籌碼 (Chips)** 與 **倍率 (Mult)** 的計分機制。
-- **動態難度**：每一回合的目標分數會指數級成長，考驗玩家的構築能力。
-- **智慧手牌管理**：支援按「點數」或「花色」一鍵排序手牌。
+### 🎮 深度 Roguelike 撲克玩法
+- **動態牌型計分**：支援標準撲克牌型（同花、順子、葫蘆等），並結合 **籌碼 (Chips)** 與 **倍率 (Mult)** 的次世代計分機制。
+- **指數級難度成長**：每一關卡的目標分數會隨進度指數上升，考驗玩家的構築極限。
+- **特殊牌型判定**：
+  - **四指 (Four Fingers)**：允許 4 張牌組成同花或順子。
+  - **歪臉 (Smeared Joker)**：紅心/方塊、黑桃/梅花 視為相同花色。
 
-### 🤡 深度小丑牌系統 (Joker System)
-- **多樣化效果**：包含加分、加倍率、條件觸發等多種小丑牌。
-- **進階判斷邏輯**：小丑牌不僅看最終牌型，還會分析手牌結構（例如：打出同花但包含一對，也能觸發「一對」相關的小丑）。
-- **商店與經濟**：
-  - **買賣機制**：可購買隨機生成的小丑牌，或販賣舊牌以騰出空間。
-  - **補充包 (Booster Packs)**：經典的「三選一」開包機制。
-  - **利息系統**：每回合結束根據存款提供利息獎勵，鼓勵存錢策略。
+### 🤡 完整的小丑牌系統 (Joker System)
+- **10+ 種獨特小丑**：包含基本的加分小丑，以及改變遊戲規則的稀有小丑（如上述的四指與歪臉）。
+- **精美 Pixel Art 視覺**：每一張小丑牌都有獨一無二的像素藝術圖案（由 AI 輔助生成）。
+- **商店與經濟循環**：
+  - **補充包 (Booster Packs)**：經典的「三選一」開包機制，獲取稀有卡牌的主要途徑。
+  - **利息系統**：每回合結束根據存款提供利息 (Interest)，鼓勵存錢策略。
 
-### 📱 現代化 UI/UX
-- **響應式設計**：完美支援橫向 (Landscape) 與 直向 (Portrait) 遊玩，大廳介面自動適配。
-- **精緻視覺**：全應用採用玻璃擬態 (Glassmorphism) 風格與流暢動畫。
-- **觸覺回饋**：出牌、得分與購買時皆有細緻的 Haptic Feedback。
-- **繁體中文化**：完整在地化的卡牌名稱與效果說明。
+### 📱 極致的視聽體驗
+- **現代化 UI/UX**：
+  - **Glassmorphism 設計**：全應用採用玻璃擬態風格，介面通透且極具質感。
+  - **流暢動畫**：計分火焰特效、卡牌發牌與翻轉動畫。
+  - **自適應佈局**：完美支援 iPhone 直向 (Portrait) 與 橫向 (Landscape) 遊玩。
+- **沉浸式音效**：
+  - 整合了選牌、出牌、籌碼碰撞、洗牌等真實音效。
+  - 具備背景音樂 (BGM) 與勝利/失敗音效。
 
 ## 🛠 技術堆疊 (Tech Stack)
 
 - **語言**：Swift 5.9+
 - **框架**：SwiftUI
 - **架構**：MVVM (Model-View-ViewModel)
-- **狀態管理**：使用 iOS 26 最新 `@Observable` 宏 (Macro)，移除傳統 `ObservableObject`。
-- **數據持久化**：使用 `UserDefaults` 儲存最高分紀錄。
+- **狀態管理**：使用 iOS 17+ `@Observable` 宏 (Observation Framework)，移除傳統 `ObservableObject`。
+- **音訊引擎**：`AVFoundation` (AVAudioPlayer)
+- **數據持久化**：`UserDefaults` (最高分紀錄)
+
+## 📂 專案結構
+- `Models/`: 核心資料結構 (`Card`, `Joker`, `PokerHand`, `GameModel`)
+- `Views/`: SwiftUI 視圖 (`GameView`, `ShopView`, `LobbyView`, `CardView`)
+- `Managers/`: 系統管理器 (`AudioManager`)
+- `Assets.xcassets/`: 圖片與 icon 資源
+- `Music/`: 音效檔案
 
 ## 🚀 如何執行 (How to Run)
 
 1. 確保你的 Mac 安裝了 **Xcode 15+**。
 2. 雙擊開啟 `Balatro.xcodeproj`。
-3. 選擇模擬器（建議 iPhone 15 Pro / Max）或實體裝置。
+3. 選擇模擬器（建議 iPhone 15/16 Pro Max）或實體裝置。
 4. 按下 `Cmd + R` 執行專案。
 
-## 📝 開發日誌與更新
+## 📝 開發歷程 (Changelog)
 
-- **v1.0**：基礎玩法實現，包含計分與出牌邏輯。
+- **v1.3 (Current)**：
+    - 新增 10 張小丑牌的 Pixel Art 圖片。
+    - 實作完整的音效系統 (BGM + SFX)。
+    - 優化 `GameView` 佈局，解決計分面板遮擋手牌的問題。
+    - 改進商店介面，新增「下一回合」按鈕的防誤觸間距。
+- **v1.2**：實作特殊小丑邏輯 (Four Fingers, Smeared Joker) 與補充包機制。
 - **v1.1**：新增商店系統與經濟循環。
-- **v1.2**：實作小丑牌「包含判定」邏輯與販賣功能。
-- **v1.3**：優化大廳 UI 與橫向適配。
+- **v1.0**：基礎玩法實現，包含計分與出牌邏輯。
 
 ## 📜 聲明 (Disclaimer)
-
 本專案為 iOS 開發練習作品，核心玩法與設計概念致敬 LocalThunk 的遊戲《Balatro》。素材與程式碼僅供學習交流使用。
 
 ---
-*Created by 01257150劉耀升*
+*Created by Wilson*
