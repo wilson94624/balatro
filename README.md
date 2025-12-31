@@ -1,12 +1,13 @@
-# 🃏 Balatro Lite (iOS SwiftUI Edition)
+# 🃏 Balatro Lite 
 
 **Balatro Lite** 是一個基於 iOS SwiftUI 開發的 Roguelike 撲克卡牌遊戲，致敬了知名獨立遊戲《Balatro》。玩家需要透過打出撲克牌型來獲得籌碼，並利用強大的「小丑牌 (Jokers)」來強化牌組與得分倍率，目標是擊敗不斷增強的關卡敵人（盲注）。
 
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 14 12" src="https://github.com/user-attachments/assets/99d112d8-2367-4f6d-a410-6955153f3167" />
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 15 14" src="https://github.com/user-attachments/assets/8c364a99-5589-4502-bfe5-91925e6d0904" />
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 15 52" src="https://github.com/user-attachments/assets/00b6c3ab-78f8-498d-83f7-0b4440f1bc2e" />
-<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 06 16 02" src="https://github.com/user-attachments/assets/127c2c15-d390-4371-8c2f-aa2c93dfe29a" />
-
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 17 22 49" src="https://github.com/user-attachments/assets/ca9d1684-6be6-4a39-adee-315836040721" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 17 22 55" src="https://github.com/user-attachments/assets/16044cf2-82f8-4261-a10d-cd83356b0f8b" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 17 24 17" src="https://github.com/user-attachments/assets/98e8f73d-12ed-47e4-9e17-01487ed69dc7" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 17 24 37" src="https://github.com/user-attachments/assets/8508821e-687d-4f09-bf6f-0b9263ca8e65" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 17 24 55" src="https://github.com/user-attachments/assets/795cf124-f42e-4211-aac5-1ab314d65d97" />
+<img width="2868" height="1320" alt="Simulator Screenshot - iPhone 17 Pro Max - 2025-12-31 at 17 25 36" src="https://github.com/user-attachments/assets/dd3d7d5e-0179-4a51-9428-1af0335b5671" />
 
 ## ✨ 核心特色 (Features)
 
